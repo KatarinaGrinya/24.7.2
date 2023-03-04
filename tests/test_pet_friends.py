@@ -30,7 +30,7 @@ def test_get_all_pets_with_valid_key(filter=''):
 
 
 def test_add_new_pet_with_valid_data(name='Ника', animal_type='Немецкая овчарка',
-                                     age='12', pet_photo='images/Акира.jpg'):
+                                     age='12', pet_photo='images/Ника.jpg'):
     """Проверяем что можно добавить питомца с корректными данными"""
 
     # Получаем полный путь изображения питомца и сохраняем в переменную pet_photo
@@ -56,7 +56,7 @@ def test_successful_delete_self_pet():
 
     # Проверяем - если список своих питомцев пустой, то добавляем нового и опять запрашиваем список своих питомцев
     if len(my_pets['pets']) == 0:
-        pf.add_new_pet(auth_key, "Бумер", "Сиамский кот", "1", "images/Noa.jpg")
+        pf.add_new_pet(auth_key, "Бумер", "Сиамский кот", "1", "images/Бумер.jpg")
         _, my_pets = pf.get_list_of_pets(auth_key, "my_pets")
 
     # Берём id первого питомца из списка и отправляем запрос на удаление
